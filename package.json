@@ -1,5 +1,5 @@
 {
-  "name": "blog-template",
+  "name": "portfolio-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,7 +26,7 @@
   },
   "author": "Imari Pickens",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
     "codyhouse-framework": "^2.8.9",
@@ -42,9 +42,9 @@
     "sass": "^1.37.5",
     "sass-embedded": "^1.0.0-beta.3"
   },
-  "homepage": "https://littlefieldcommunityworks.org",
+  "homepage": "https://oxyjon.herokuapp.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodyHouse/codyhouse-framework.git"
+    "url": "git+https://github.com/Picke1id/OxyJon.git"
   }
 }
