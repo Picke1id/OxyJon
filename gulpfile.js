@@ -60,6 +60,22 @@ gulp.task('scripts', function() {
     stream: true
   }));
 });
+
+gulp.task('serve', gulp.series(['sass', 'scripts'], function() {
+  browserSync.init({
+    server: {
+      baseDir: 'main'
+    },
+    port: process.env.PORT || 5000
+  });
+
+  gulp.watch('main/*.html', gulp.series(reload));
+  gulp.watch('main/assets/css/**/*.scss', gulp.series(['sass']));
+  gulp.watch(componentsJsPath, gulp.series(['scripts']));
+}));
+
+gulp.task('default', gulp.series('serve'));
+
 // This task is used to reload the project whan changes are made to a html/scss/js file.
 gulp.task('browserSync', gulp.series(function (done) {
   browserSync.init({
