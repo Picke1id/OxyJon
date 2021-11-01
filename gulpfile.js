@@ -61,6 +61,7 @@ gulp.task('scripts', function() {
   }));
 });
 
+// Created server for Heroku app
 gulp.task('serve', gulp.series(['sass', 'scripts'], function() {
   browserSync.init({
     server: {
