@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- TITLE -->
+        <title>LCA | Donate</title>
+        <!-- METADATA -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CODYHOUSE CSS FILE -->
+        <link id="codyframe" rel="stylesheet" href="./../css/style.css">
+        <link rel="stylesheet" href="./../css/donate.css">
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- HEADER CONTENT -->
+        <header class="header position-sticky js-header" style="z-index: 6;">
+            <div class="header__container container max-width-lg">
+                <!-- Navbar Logo & Title -->
+                <div class="header-logo">
+                    <a href="./../../index.html">
+                        <img alt="Littlefield Logo" src="./../images/littlefieldlogo7.png">
+                        <h1 class="color-primary-darker"> Littlefield Community Association</h1>
+                    </a>
+                </div>
+                <!-- Toggle Menu Button -->
+                <button class="btn btn--subtle header__trigger js-header__trigger" aria-label="Toggle menu" aria-expanded="false" aria-controls="header-nav">
+                    <i class="header__trigger-icon" aria-hidden="true"></i>
+                    <span>Menu</span>
+                </button>
+                <!-- Menu List -->
+                <nav class="header__nav js-header__nav" id="header-nav" role="navigation" aria-label="Main">
+                    <div class="header__nav-inner">
+                        <div class="header__label">Main menu</div>
+                        <ul class="header__list margin-top-xxl@xxs margin-top-0@lg">
+                            <li class="header__item"><a href="./../../index.html" class="header__link">Home</a></li>
+                            <li class="header__item"><a href="ourstory.html" class="header__link">Our Story</a></li>
+                            <li class="header__item"><a href="volunteer.html" class="header__link" >Volunteer</a></li>
+                            <li class="header__item"><a href="events.html" class="header__link">Events</a></li>
+                            <li class="header__item"><a href="contact.html" class="header__link">Contact</a></li>
+                            <li class="header__item"><a href="blog.html" class="header__link">Blog</a></li>
+                            <li class="header__item header__item--divider" aria-hidden="true"></li>
+                            <li class="header__item"><a href="donate.html" class="btn btn--primary">Donate</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- MAIN CONTENT -->
+        <main id="donate_main-content">  
+            <!-- HERO -->
+            <section class="hero position-sticky hero--overlayer bg-cover padding-y-xxxl" id="donate-hero" style="z-index: 5;"></section>
+            <!-- TEXT -->
+            <section class="padding-y-lg position-relative padding-x-xl bg-white" id="text-area" style="z-index: 4;">
+                <div class="text-component ">
+                    <p class="text-center text-xl" id="donate-text">There are <strong>MANY</strong> ways to <strong>INVEST</strong> in the <strong class="color-primary">future</strong> of our <strong>children</strong> and <strong>community</strong>.</p>
+                </div>
+            </section>
+            <!-- REVEALING SECTION -->
+            <section class="donate-scroll position-relative z-index-3 bg shadow-sm bg-contrast-lower">
+                <!-- Scrolling Image -->
+                <div class="container max-width-sm min-height-100vh flex flex-center">
+                    <div>
+                        <img class="text-bubble" src="./../images/talkbubble.png">
+                        <p class="text-bubble-text text-center text-xxl@xs text-lg@md">Scroll down <br> to learn more!</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Donation Text and Form -->
+            <section class="revealing-section bg z-index-2 js-revealing-section">
+                <div class="container max-width-sm padding-y-xl">
+                    <div class="text-component line-height-lg v-space-md">
+                        <h2 class="text-xxxl text-center">How You Can Help!</h2>
+                        <p class="text-base">Donations made to LFCA help to keep our community thriving in so many different ways.</p>
+                        <p class="text-base">LFCA is always investing in programs that will enrich the minds of our children, improve the lives of our elderly, and benefit the community as a whole.</p>
+                        <p class="text-base">When you make a donation to our organization, portions of those donations go to programs that assist students of Noble Elementary Middle School, other local block clubs that need assistance starting up, and families in need of food and resources in our neighborhoods.  </p>
+                        <p class="text-base">Every dollar counts when you're making a difference, so give responsibly. Any amount you can spare towards our cause is very much felt and appreciated.</p>
+                        <!-- Donorbox Donation Form -->
+                        <div id="donation-form" class="text-center">
+                            <iframe src="https://donorbox.org/embed/littlefield-donation-fund" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; max-height:none!important"></iframe>
+                        </div>
+                        <p class="text-base">Giving also has its' rewards beyond making a difference!</p>
+                        <p class="text-base">Littlefield Community Association is a 501(c)(3) organization, which means that your contributions can be tax deductible.</p>
+                        <p class="text-base font-italic"> (For more information on how your contributions can be tax deductible, speak with your local tax consultant/representative.)</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer id="footer-content" class="main-footer position-relative z-index-1 padding-top-xl bg-black">
+            <div class="container max-width-100%">
+                <div class="grid gap-xl justify-center@xs">
+                    <!-- Newsletter Sign Up -->
+                    <section class="col-5@md col-4@lg margin-right-xl@lg col@xl order-1@xs newsletter text-center ">
+                        <div class="container max-width-xs">
+                            <div class="text-component margin-bottom-md color-white ">
+                                <h2 class="color-white">Join our Newsletter</h2>
+                                <p>Get our monthly recap with the latest news.</p>
+                            </div>
+                            <!-- Email Input -->
+                            <form action="https://formspree.io/f/xrgrddbq" method="POST" class="grid gap-xxs">
+                                <div class="col@xxs min-width-0">
+                                    <input class="form-control width-100% height-100%" aria-label="Email" type="email" name="email" id="email" placeholder="Email address">
+                                </div>
+                                <!-- Subscribe Button-->
+                                <div class="col-content@xxs">
+                                    <button id="subscribe-button" class="btn btn--primary width-100% height-100%" aria-controls="toast-1">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- Littlefield Logo-->
+                    <div class="col-3@xs order-3@xs  margin-left-0@md margin-left-lg@lg ">
+                        <a class="main-footer__logo" href="index.html">
+                            <img alt="Littlefield logo" src="./../images/littlefieldlogo7.png" width="200">
+                        </a>
+                    </div>
+                    <!-- Footer Links -->
+                    <nav class="margin-left-xs@lg col@xs col-8@sm col@md col-5@lg col-4@xl order-2@xs">
+                        <ul class="grid gap-lg justify-center@xs">
+                            <!-- Quick Links-->
+                            <li class="col@xs  margin-left-0@md margin-left-0@lg">
+                            <h4 class="margin-bottom-sm text-base@md color-white">Quick Links</h4>
+                            <ul class="grid gap-xs text-sm@md">
+                                <li><a href="#0" class="main-footer__link">Site Credits</a></li>
+                                <li><a href="#0" class="main-footer__link">FAQ</a></li>
+                            </ul>
+                            </li>
+                            <!-- Give Links -->
+                            <li class="col@xs">
+                            <h4 class="margin-bottom-sm text-base@md color-white">Give</h4>
+                            <ul class="grid gap-xs text-sm@md">
+                                <li><a href="assets/pages/donate.html" class="main-footer__link">Donate</a></li>
+                                <li><a href="assets/pages/volunteer.html" class="main-footer__link">Volunteer</a></li>
+                            </ul>
+                            </li>
+                            <!-- Resource Links -->
+                            <li class="col@xs margin-right-lg@xs col@md col@lg">
+                            <h4 class="margin-bottom-sm text-base@md color-white">Resources</h4>
+                            <ul class="grid gap-xs text-sm@md">
+                                <li><a href="assets/pages/blog.html" class="main-footer__link">Blog</a></li>
+                                <li><a href="assets/pages/contact.html" class="main-footer__link">Contact Us</a></li>
+                                <li><a href="assets/pages/covid.html" class="main-footer__link">COVID</a></li>
+                                <li><a href="assets/pages/events.html" class="main-footer__link">Events</a></li>
+                                <li><a href="assets/pages/resources.html" class="main-footer__link">Resource Center</a></li>
+                            </ul>
+                            </li>
+                            <!-- About Links-->
+                            <li class="col@xs col-5@md col@lg">
+                            <h4 class=" margin-bottom-sm text-base@md color-white">About</h4>
+                            <ul class="grid gap-xs text-sm@md">
+                                <li><a href="assets/pages/mission.html" class="main-footer__link">Our Mission</a></li>
+                                <li><a href="assets/pages/ourstory.html" class="main-footer__link">Our Story</a></li>
+                                <li><a href="assets/pages/team.html" class="main-footer__link">Our Team</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Copyright Info -->
+                <div class="flex flex-column border-top padding-y-xs margin-top-lg flex-row@md justify-between@md items-center@md max-width-xxxxl">
+                    <div class="margin-bottom-sm margin-bottom-0@md">
+                        <div class="text-sm text-xs@md color-contrast-medium flex flex-wrap gap-xs text-center@xs">
+                            <span>&copy; 2021 Littlefield Community Association, Inc. </span>
+                        </div>
+                    </div>
+                    <!-- Design Credit -->
+                    <div class="flex items-center gap-xs">
+                        <p class="text-xs@xs text-xs@md color-contrast-medium text-center@xs">DESIGNED BY IMARI PICKENS</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- CODYHOUSE SCRIPT -->
+        <script>document.getElementsByTagName("html")[0].className += " js";</script>
+        <!-- JQUERY SCRIPT -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <!-- DONOR BOX SCRIPT -->
+        <script src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+        <!-- EXTERNAL SCRIPTS -->
+        <script src="./../js/scripts.js"></script>     
+    </body>
+</html>

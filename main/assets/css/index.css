@@ -1,0 +1,30 @@
+#hero{
+    background-image: url(./../images/hero3.jpg);
+}
+
+/*#animated-headline{
+    background-image: url(./../images/brickbg.jpg);
+}*/
+
+.main-content {
+    background-image: url(./../images/brickbg.jpg);
+}
+
+#donate{
+    background-image: url(./../images/hands.jpg);
+}
+
+#volunteer{
+    background-image: url(./../images/volunteer.jpg);
+}
+
+#covid{
+    background-image: url(./../images/covid3.jpg);
+}
+
+#resource-center{
+    background-image: url(./../images/resource.jpg);
+}
+
+
+

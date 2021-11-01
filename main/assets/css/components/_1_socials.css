@@ -1,0 +1,36 @@
+/* -------------------------------- 
+
+File#: _1_socials
+Title: Socials
+Descr: Section with links to social media accounts
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.socials__btns a {
+    --size: 2.5em;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-contrast-high);
+    transition: 0.3s;
+  }
+  .socials__btns a .icon {
+    font-size: 1.25em;
+    /* icon size */
+    color: var(--color-bg);
+    /* icon color */
+    transition: color 0.3s, -webkit-transform 0.3s var(--ease-out-back);
+    transition: color 0.3s, transform 0.3s var(--ease-out-back);
+    transition: color 0.3s, transform 0.3s var(--ease-out-back), -webkit-transform 0.3s var(--ease-out-back);
+  }
+  .socials__btns a:hover {
+    background-color: var(--color-primary);
+  }
+  .socials__btns a:hover .icon {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: var(--color-white);
+  }

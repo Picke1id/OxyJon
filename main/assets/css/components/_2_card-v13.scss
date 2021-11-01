@@ -1,0 +1,65 @@
+@use '../base' as *;
+@use '_1_button-effects.scss' as *;
+
+/* -------------------------------- 
+
+File#: _2_card-v13
+Title: Card v13
+Descr: Container of information used as teaser for further content exploration
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+.card-v13 {
+  --transition-duration: .3s;
+}
+
+.card-v13__figure-wrapper {
+  display: block;
+}
+
+.card-v13__figure {
+  clip-path: circle(60%);
+
+  transition: clip-path var(--transition-duration) var(--ease-out);
+
+  #pink-shade {
+    display: block;
+    width: 100%;
+    transform: scale(8) translate(5%, 15%);
+
+    transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration);
+  }
+
+  #brown-shade {
+    display: block;
+    width: 100%;
+    transform: scale(8) translate(-10%, 23%);
+
+    transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration);
+  }
+
+  #green-shade {
+    display: block;
+    width: 100%;
+    transform: scale(3) translate(10%, -1%);
+
+    transition: transform var(--transition-duration) var(--ease-out), filter var(--transition-duration);
+  }
+
+  .card-v13__figure-wrapper:hover & {
+    clip-path: circle(70%);
+
+    img {
+      transform: scale(2);
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.card-v13__separator {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: alpha(var(--color-contrast-higher), 0.1);
+}

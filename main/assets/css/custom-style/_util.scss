@@ -1,0 +1,533 @@
+@use '../base' as *;
+
+// --------------------------------
+
+// How to create custom utility classes
+
+// --------------------------------
+
+// 👇 your custom utility class
+// .my-util-class { 
+//   property: value;
+// }
+
+// 👇 (optional) create responsive variations - edit only [my-util-class, property, value]
+// @each $breakpoint, $value in $breakpoints { 
+//   @include breakpoint(#{$breakpoint}) {
+//     .my-util-class\@#{$breakpoint} {
+//       property: value;
+//     }
+//   }
+// }
+
+// CONTACT PAGE
+.contact-title {
+    font-family: 'Kanit', sans-serif;
+}
+.contact-paragraph {
+    font-family: 'Kanit', sans-serif;
+}
+
+// BREAKPOINTS
+@include breakpoint(xxs) {
+    //Portrait of OxyJon
+
+    // Tattoo Design Cards
+    .card-one {
+        background-image: url(./../images/brain-tat.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 43%;
+    }
+
+    .card-two {
+        background-image: url(./../images/bear-skull2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-three {
+        background-image: url(./../images/ram-tat.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-four {
+        background-image: url(./../images/lil-feet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-five {
+        background-image: url(./../images/grasshopper.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-six {
+        background-image: url(./../images/grass-tat.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-seven {
+        background-image: url(./../images/code-quiz-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    .card-eight {
+        background-image: url(./../images/eat-da-burger-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+    // Flash Designs Cards
+    .card-nine {
+        background-image: url(./../images/fire-lighter-sketch.jpg);
+        background-size: 230px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-ten {
+        background-image: url(./../images/elephant-sketch.jpg);
+        background-size: 200px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-eleven {
+        background-image: url(./../images/gun-flash-sheet.jpg);
+        background-size: 190px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-twelve {
+        background-image: url(./../images/dbz-sketch.jpg);
+        background-size: 220px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-thirteen {
+        background-image: url(./../images/feather-text-sketch.jpg);
+        background-size: 200px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-fourteen {
+        background-image: url(./../images/gun-sketch.jpg);
+        background-size: 250px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-fifteen {
+        background-image: url(./../images/gun-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+    .card-sixteen {
+        background-image: url(./../images/dbz-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+    //PROMO VIDEO
+    .promo-vid {
+        padding-top: 80px;
+    }
+}
+
+  
+@include breakpoint(sm) {
+    //Portrait of OxyJon
+    .oxy-face {
+        width: 250px;
+    }
+
+    //Tattoo Design Cards
+    .card-one {
+        background-image: url(./../images/brain-tat.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 43%;
+    }
+
+    .card-two {
+        background-image: url(./../images/bear-skull2.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-three {
+        background-image: url(./../images/ram-tat.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-four {
+        background-image: url(./../images/lil-feet.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-five {
+        background-image: url(./../images/grasshopper.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-six {
+        background-image: url(./../images/grass-tat.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-seven {
+        background-image: url(./../images/code-quiz-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    .card-eight {
+        background-image: url(./../images/eat-da-burger-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    // Flash Sheet Design Cards
+    .card-nine {
+        background-image: url(./../images/fire-lighter-sketch.jpg);
+        background-size: 350px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-ten {
+        background-image: url(./../images/elephant-sketch.jpg);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-eleven {
+        background-image: url(./../images/gun-flash-sheet.jpg);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-twelve {
+        background-image: url(./../images/dbz-sketch.jpg);
+        background-size: 350px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-thirteen {
+        background-image: url(./../images/feather-text-sketch.jpg);
+        background-size: 300px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-fourteen {
+        background-image: url(./../images/gun-sketch.jpg);
+        background-size: 350px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-fifteen {
+        background-image: url(./../images/gun-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+    .card-sixteen {
+        background-image: url(./../images/dbz-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+    
+
+} 
+  
+@include breakpoint(md) {
+    //Portrait of OxyJon
+    .oxy-face {
+        width: 250px;
+    }
+
+    // Tattoo Design Cards
+    .card-one {
+        background-image: url(./../images/brain-tat.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 43%;
+    }
+
+    .card-two {
+        background-image: url(./../images/bear-skull2.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-three {
+        background-image: url(./../images/ram-tat.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-four {
+        background-image: url(./../images/lil-feet.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-five {
+        background-image: url(./../images/grasshopper.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-six {
+        background-image: url(./../images/grass-tat.jpg);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-seven {
+        background-image: url(./../images/code-quiz-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    .card-eight {
+        background-image: url(./../images/eat-da-burger-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+} 
+
+@include breakpoint(lg) {
+    // Tattoo Design Cards
+    .card-one {
+        background-image: url(./../images/brain-tat.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50% 43%;
+    }
+
+    .card-two {
+        background-image: url(./../images/bear-skull2.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-three {
+        background-image: url(./../images/ram-tat.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-four {
+        background-image: url(./../images/lil-feet.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-five {
+        background-image: url(./../images/grasshopper.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-six {
+        background-image: url(./../images/grass-tat.jpg);
+        background-size: 640px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-seven {
+        background-image: url(./../images/code-quiz-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    .card-eight {
+        background-image: url(./../images/eat-da-burger-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+    
+    // Flash Sheet Design Cards
+    .card-nine {
+        background-image: url(./../images/fire-lighter-sketch.jpg);
+        background-size: 550px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-ten {
+        background-image: url(./../images/elephant-sketch.jpg);
+        background-size: 520px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-eleven {
+        background-image: url(./../images/gun-flash-sheet.jpg);
+        background-size: 460px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-twelve {
+        background-image: url(./../images/dbz-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-thirteen {
+        background-image: url(./../images/feather-text-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-fourteen {
+        background-image: url(./../images/gun-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-fifteen {
+        background-image: url(./../images/gun-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+    .card-sixteen {
+        background-image: url(./../images/dbz-sketch.jpg);
+        background-size: 500px;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+    }
+
+} 
+
+@include breakpoint(xl) {
+    //Portrait of OxyJon
+    .oxy-face {
+        width: 300px;
+    }
+    
+    //PROMO VIDEO
+    .promo-vid {
+        padding-top: 300px;
+    }
+} 
+
+
+@include breakpoint(xxl) {
+    //Portrait of OxyJon
+    .oxy-face {
+        width: 300px;
+    }
+
+    // Tattoo Design Cards
+    .card-one {
+        background-image: url(./../images/brain-tat.jpg);
+        background-size: 740px;
+        background-repeat: no-repeat;
+        background-position: 50% 43%;
+    }
+
+    .card-two {
+        background-image: url(./../images/bear-skull2.jpg);
+        background-size: 740px;
+        background-repeat: no-repeat;
+        background-position: 50% 45%;
+    }
+
+    .card-three {
+        background-image: url(./../images/ram-tat.jpg);
+        background-size: 740px;
+        background-repeat: no-repeat;
+        background-position: 50% 20%;
+    }
+
+    .card-four {
+        background-image: url(./../images/lil-feet.jpg);
+        background-size: 740px;
+        background-repeat: no-repeat;
+        background-position: 50% 32%;
+    }
+
+    .card-five {
+        background-image: url(./../images/grasshopper.jpg);
+        background-size: 740px;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+    }
+
+    .card-six {
+        background-image: url(./../images/grass-tat.jpg);
+        background-size: 740px;
+        background-repeat: no-repeat;
+        background-position: 50% 74%;
+    }
+
+    .card-seven {
+        background-image: url(./../images/code-quiz-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    .card-eight {
+        background-image: url(./../images/eat-da-burger-demo.png);
+        background-size: cover;
+        background-position: 50% 0%;
+    }
+
+    //PROMO VIDEO
+    .promo-vid {
+        padding-top: 300px;
+    }
+
+} 
+
+

@@ -1,0 +1,158 @@
+/* -------------------------------- 
+
+File#: _1_accordion
+Title: Accordion
+Descr: Create stacked sections of content and allow the user to expand/collapse them
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --accordion-border-width: 1px;
+  --accordion-border-color: var(--color-contrast-lower);
+  --accordion-icon-size: 1em;
+  --accordion-icon-stroke-width: 1.5px;
+}
+
+.accordion__item {
+  border-style: solid;
+  border-color: var(--accordion-border-color);
+  border-bottom-width: var(--accordion-border-width);
+}
+.accordion__item:first-child {
+  border-top-width: var(--accordion-border-width);
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+}
+.accordion__header .icon {
+  --size: var(--accordion-icon-size);
+}
+.accordion__header .icon .icon__group {
+  stroke-width: var(--accordion-icon-stroke-width);
+}
+
+.accordion__icon-arrow .icon__group,
+.accordion__icon-arrow-v2 .icon__group,
+.accordion__icon-plus .icon__group {
+  will-change: transform;
+  -webkit-transform-origin: 8px 8px;
+          transform-origin: 8px 8px;
+}
+.accordion__icon-arrow .icon__group > *,
+.accordion__icon-arrow-v2 .icon__group > *,
+.accordion__icon-plus .icon__group > * {
+  -webkit-transform-origin: 8px 8px;
+          transform-origin: 8px 8px;
+}
+
+.accordion__icon-arrow .icon__group > *,
+.accordion__icon-arrow-v2 .icon__group > * {
+  stroke-dasharray: 17;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+.accordion__icon-arrow .icon__group > *:first-child,
+.accordion__icon-arrow-v2 .icon__group > *:first-child {
+  stroke-dashoffset: 8.5;
+}
+.accordion__icon-arrow .icon__group > *:last-child,
+.accordion__icon-arrow-v2 .icon__group > *:last-child {
+  stroke-dashoffset: 8.5;
+}
+
+.accordion__icon-plus .icon__group {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.accordion__icon-plus .icon__group > *:first-child {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow .icon__group > *:first-child {
+  -webkit-transform: translateY(-3px) rotate(-90deg);
+          transform: translateY(-3px) rotate(-90deg);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow .icon__group > *:last-child {
+  -webkit-transform: translateY(-3px) rotate(90deg);
+          transform: translateY(-3px) rotate(90deg);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow-v2 .icon__group {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-arrow-v2 .icon__group > *:first-child, .accordion__item--is-open > .accordion__header > .accordion__icon-arrow-v2 .icon__group *:last-child {
+  stroke-dashoffset: 0;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-plus .icon__group {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.accordion__item--is-open > .accordion__header > .accordion__icon-plus .icon__group > *:first-child {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.js .accordion__panel {
+  display: none;
+  will-change: height;
+  -webkit-transform: translateZ(0px);
+          transform: translateZ(0px);
+}
+.js .accordion__item--is-open > .accordion__panel {
+  display: block;
+}
+
+.accordion[data-animation=on] .accordion__item--is-open .accordion__panel > * {
+  -webkit-animation: accordion-entry-animation 0.4s var(--ease-out);
+          animation: accordion-entry-animation 0.4s var(--ease-out);
+}
+.accordion[data-animation=on] .accordion__icon-arrow .icon__group,
+.accordion[data-animation=on] .accordion__icon-arrow-v2 .icon__group,
+.accordion[data-animation=on] .accordion__icon-plus .icon__group {
+  transition: -webkit-transform 0.3s var(--ease-out);
+  transition: transform 0.3s var(--ease-out);
+  transition: transform 0.3s var(--ease-out), -webkit-transform 0.3s var(--ease-out);
+}
+.accordion[data-animation=on] .accordion__icon-arrow .icon__group > *,
+.accordion[data-animation=on] .accordion__icon-arrow-v2 .icon__group > *,
+.accordion[data-animation=on] .accordion__icon-plus .icon__group > * {
+  transition: stroke-dashoffset 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, stroke-dashoffset 0.3s;
+  transition: transform 0.3s, stroke-dashoffset 0.3s, -webkit-transform 0.3s;
+  transition-timing-function: var(--ease-out);
+}
+
+@-webkit-keyframes accordion-entry-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes accordion-entry-animation {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
